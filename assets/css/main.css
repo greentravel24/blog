@@ -9,8 +9,14 @@
 		vertical-align: baseline;
 	}
 
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
+	}
+
+	article {
+		display: grid;
+		  grid-template-columns: 1fr;
+		  grid-template-rows: auto auto 40px;
 	}
 
 	body {
