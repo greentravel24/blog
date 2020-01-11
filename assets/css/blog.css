@@ -88,7 +88,7 @@
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 17pt;
+		font-size: 4em;
 		font-weight: 200;
 		line-height: 1.65;
 	}
@@ -96,7 +96,7 @@
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 13pt;
+				font-size: 16pt;
 			}
 
 		}
@@ -104,7 +104,7 @@
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -112,7 +112,7 @@
 		@media screen and (max-width: 360px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -292,7 +292,126 @@
 	hr {
 		border-bottom-color: #666666;
 	}
+input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		border-radius: 4px;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 400;
+		height: 3.5em;
+		line-height: 3.5em;
+		padding: 0 2em 0 2.375em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		text-transform: uppercase;
+		letter-spacing: 0.325em;
+		font-size: 0.725em;
+	}
 
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		input[type="button"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			margin-right: 0.5em;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		button.fit,
+		.button.fit {
+			display: block;
+			margin: 0 0 1em 0;
+			width: 100%;
+		}
+
+		input[type="submit"].big,
+		input[type="reset"].big,
+		input[type="button"].big,
+		button.big,
+		.button.big {
+			font-size: 0.8em;
+			padding: 0 2.5em 0 2.875em;
+			height: 3.75em;
+			line-height: 3.75em;
+		}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		button.disabled,
+		button:disabled,
+		.button.disabled,
+		.button:disabled {
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			-ms-pointer-events: none;
+			pointer-events: none;
+			opacity: 0.25;
+		}
+
+		@media screen and (max-width: 480px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button {
+				padding: 0;
+			}
+
+		}
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px #666666;
+		color: #444444 !important;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			color: #EF6480 !important;
+			box-shadow: inset 0 0 0 2px #EF6480;
+		}
+
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		button:active,
+		.button:active {
+			background-color: rgba(239, 100, 128, 0.15);
+		}
+
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		input[type="button"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			color: #999999;
+		}
 /* Box */
 
 	.box {
@@ -346,7 +465,7 @@
 
 		.image.main {
 			display: block;
-			margin: 0 0 3em 0;
+			margin: 0 0 6em 0;
 			width: 100%;
 		}
 
@@ -373,7 +492,7 @@
 		}
 
 	ul.alt li {
-		border-top-color: #666666;
+		border-top-color: #666643;
 	}
 
 /* Table */
@@ -462,14 +581,18 @@
 	table.alt tbody tr td {
 		border-color: #666666;
 	}
-
+.bild{
+    max-width: calc(100% - 2em);
+    height: auto;
+    align-items: center;
+}
 /* Item */
 
 	.item {
 		padding: 3em 3em 1em 3em;
 		background-color: #ffffff;
 		border-radius: 4px;
-		text-align: center;
+		text-align: justify;
 	}
 
 		.item header {
@@ -592,7 +715,7 @@
 
 		.items .item {
 			margin: 2em 0 0 2em;
-			width: calc(50% - 2em);
+			width: calc(100% - 2em);
 		}
 
 	@media screen and (max-width: 980px) {
@@ -651,6 +774,9 @@
 			}
 
 	}
+.Headline{
+    text-align: center;
+}
 
 /* Wrapper */
 
@@ -695,7 +821,7 @@
 /* Header */
 
 	#header {
-		background-color: #444;
+		background-color: #4444;
 		color: rgba(255, 255, 255, 0.75);
 		display: -moz-flex;
 		display: -webkit-flex;
